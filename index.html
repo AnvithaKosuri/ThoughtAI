@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ThoughtAI — Starter Site</title>
+  <meta name="description" content="Simple starter website for ThoughtAI" />
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">ThoughtAI</h1>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Build something thoughtful.</h2>
+        <p>A minimal starter website for your project — ready to publish on GitHub Pages.</p>
+        <p><a class="btn" href="#features">Get started</a></p>
+      </div>
+    </section>
+
+    <section id="about" class="container section">
+      <h3>About</h3>
+      <p>ThoughtAI is an educational tool focused on guided problem-solving. This is a simple static site scaffold you can expand.</p>
+    </section>
+
+    <section id="features" class="container section">
+      <h3>Features</h3>
+      <ul class="features">
+        <li>Responsive layout</li>
+        <li>Simple, accessible HTML/CSS</li>
+        <li>Easy to publish with GitHub Pages</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container section">
+      <h3>Contact</h3>
+      <p>Questions? Open an issue on your repo or add contact info here.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> ThoughtAI — Built with a starter template.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
