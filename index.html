@@ -3,60 +3,386 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ThoughtAI — Starter Site</title>
-  <meta name="description" content="Simple starter website for ThoughtAI" />
+  <title>ThoughtAI — Team 17</title>
+  <meta name="description" content="ThoughtAI is an iPad-based learning app that helps students build critical thinking by earning AI help through demonstrated reasoning." />
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="enter" id="enter" role="dialog" aria-labelledby="enter-title" aria-describedby="enter-desc">
+    <div class="enter-inner">
+      <p class="enter-kicker">Agentic Interaction • Team 17</p>
+      <h1 id="enter-title" class="enter-title">ThoughtAI</h1>
+      <p id="enter-desc" class="enter-desc">Click to enter</p>
+      <a class="enter-card" href="#overview" id="enter-cta" aria-label="Enter ThoughtAI project website">
+        <img class="enter-img" src="assets/thoughtai-mark.svg" alt="ThoughtAI mark" />
+      </a>
+      <p class="enter-sub">Designed for CS185 deliverables (GR1–GR10). Hosted on GitHub Pages.</p>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container">
-      <h1 class="logo">ThoughtAI</h1>
+      <a class="logo" href="#top" aria-label="ThoughtAI home">ThoughtAI</a>
       <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#contact">Contact</a>
+        <a href="#overview">Overview</a>
+        <a href="#deliverables">Deliverables</a>
+        <a href="#team">Team</a>
+        <a href="#links">Links</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
       <div class="container">
-        <h2>Build something thoughtful.</h2>
-        <p>A minimal starter website for your project — ready to publish on GitHub Pages.</p>
-        <p><a class="btn" href="#features">Get started</a></p>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="pill">Value proposition</p>
+            <h2 class="gradient-title">ThoughtAI for critical thinking because critical thinking is critical.</h2>
+            <p>
+              ThoughtAI is an iPad-based learning app for handwritten problem solving. Instead of providing answers on demand,
+              ThoughtAI withholds full solutions unless students demonstrate active thinking through visible reasoning, partial work,
+              and engagement with guided prompts.
+            </p>
+            <div class="hero-stats" aria-label="Quick project highlights">
+              <div class="stat">
+                <div class="stat-k">Platform</div>
+                <div class="stat-v">iPad</div>
+              </div>
+              <div class="stat">
+                <div class="stat-k">Focus</div>
+                <div class="stat-v">Handwritten problem solving</div>
+              </div>
+              <div class="stat">
+                <div class="stat-k">Principle</div>
+                <div class="stat-v">Earned help, not shortcuts</div>
+              </div>
+            </div>
+            <p class="hero-actions">
+              <a class="btn" href="#deliverables">View deliverables</a>
+              <a class="btn btn-secondary" href="#overview">Project overview</a>
+            </p>
+          </div>
+
+          <div class="hero-visual" aria-label="ThoughtAI preview">
+            <div class="mockup card">
+              <div class="mockup-top">
+                <span class="mockup-dot dot-red" aria-hidden="true"></span>
+                <span class="mockup-dot dot-amber" aria-hidden="true"></span>
+                <span class="mockup-dot dot-green" aria-hidden="true"></span>
+                <span class="mockup-title">ThoughtAI • iPad learning workspace</span>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-screen">
+                  <img src="assets/thoughtai-mark.svg" alt="ThoughtAI preview graphic" />
+                </div>
+                <div class="mockup-caption">
+                  <span class="chip">Write</span>
+                  <span class="chip">Check</span>
+                  <span class="chip">Hints</span>
+                  <span class="chip">Tutor mode</span>
+                </div>
+              </div>
+            </div>
+            <a class="scroll-hint" href="#overview">Scroll to overview</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="about" class="container section">
-      <h3>About</h3>
-      <p>ThoughtAI is an educational tool focused on guided problem-solving. This is a simple static site scaffold you can expand.</p>
+    <section class="container section" id="features">
+      <header class="section-head">
+        <h3>Key features</h3>
+        <p class="muted">Designed to keep students thinking while still giving timely support.</p>
+      </header>
+      <div class="grid-3">
+        <div class="card feature" data-accent="cyan">
+          <div class="card-head">
+            <div class="card-icon" aria-hidden="true">✎</div>
+            <h4>Handwritten-first workflow</h4>
+          </div>
+          <p class="muted">Write directly on iPad or import/take photos of work—no awkward typing for math-heavy problems.</p>
+        </div>
+        <div class="card feature" data-accent="green">
+          <div class="card-head">
+            <div class="card-icon" aria-hidden="true">⇢</div>
+            <h4>Earned help</h4>
+          </div>
+          <p class="muted">Guidance unlocks as students show reasoning. The system emphasizes hints, questions, and feedback.</p>
+        </div>
+        <div class="card feature" data-accent="purple">
+          <div class="card-head">
+            <div class="card-icon" aria-hidden="true">◎</div>
+            <h4>Control + transparency</h4>
+          </div>
+          <p class="muted">Clear next steps, visible checkpoints, and calm interactions reduce overreliance and improve trust.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="features" class="container section">
-      <h3>Features</h3>
-      <ul class="features">
-        <li>Responsive layout</li>
-        <li>Simple, accessible HTML/CSS</li>
-        <li>Easy to publish with GitHub Pages</li>
-      </ul>
+    <section id="overview" class="container section">
+      <header class="section-head">
+        <h3>Overview</h3>
+        <p class="muted">Problem framing, solution approach, and what we learned from needfinding.</p>
+      </header>
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-head">
+            <div class="card-icon" aria-hidden="true">!</div>
+            <h4>Problem</h4>
+          </div>
+          <p>
+            People across many backgrounds increasingly view AI with skepticism. Many AI tools provide shortcuts that discourage critical thinking and replace human effort rather than supporting it. As companies adopt AI for speed and efficiency, tools often prioritize output over understanding. This has led to concern that human reasoning and problem solving are being devalued.
+          </p>
+          <p>
+            In education, this tension is especially visible. Students use AI to bypass reasoning, receive full solutions instantly, and disengage from the learning process. Our GR5 testing showed that while students want help, they do not want to lose control of their thinking. The challenge is designing AI that supports learning without replacing human reasoning.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-head">
+            <div class="card-icon card-icon-accent" aria-hidden="true">↗</div>
+            <h4>Solution</h4>
+          </div>
+          <p>
+            Instead of providing answers on demand, the AI withholds full solutions unless the student demonstrates active thinking. Progress is earned through visible reasoning, partial work, and engagement with guided prompts. The AI responds with hints, questions, and feedback rather than final answers, reinforcing learning without replacing human thought. This approach reframes AI as a support for reasoning rather than a shortcut.
+          </p>
+          <div class="chips" aria-label="Solution principles">
+            <span class="chip">Guided prompts</span>
+            <span class="chip">Visible reasoning</span>
+            <span class="chip">User control</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-head">
+            <div class="card-icon" aria-hidden="true">▦</div>
+            <h4>Product</h4>
+          </div>
+          <p>ThoughtAI is an iPad based learning app that applies this solution to handwritten problem solving.</p>
+          <p>
+            Students can write directly on the screen or take photos of their work. ThoughtAI provides 3 forms of analyzing their reasoning and delivers contextual guidance, requiring students to complete each reasoning step before progressing or requesting further help.
+          </p>
+          <p>
+            By integrating AI into a student’s natural workflow, ThoughtAI supports reflection and understanding while preventing over reliance on AI generated answers.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-head">
+            <div class="card-icon" aria-hidden="true">✓</div>
+            <h4>What we learned (needfinding)</h4>
+          </div>
+          <ul class="bullets">
+            <li>Across users, autonomy without visibility reduced trust.</li>
+            <li>People preferred AI that supports learning rather than replaces thinking.</li>
+            <li>Users wanted clear boundaries and control over how help is given.</li>
+            <li>Transparency mattered more than “flashy” interaction: users wanted reasoning, uncertainty cues, and the ability to verify.</li>
+            <li>Overreliance felt likely under stress, so help should default to low intervention with clear escalation paths.</li>
+            <li>Users responded better to calm, efficient guidance than overly human-like or chatty behavior.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="container section">
-      <h3>Contact</h3>
-      <p>Questions? Open an issue on your repo or add contact info here.</p>
+    <section id="deliverables" class="container section">
+      <header class="section-head">
+        <h3>Deliverables</h3>
+        <p class="muted">Slides, prototypes, videos, and final documentation (linked with relative paths).</p>
+      </header>
+      <div class="deliverables">
+        <article class="deliverable card" data-accent="blue">
+          <div class="deliverable-top">
+            <h4>GR1 — Needfinding</h4>
+            <span class="badge badge-ready">Ready</span>
+          </div>
+          <p class="muted">Interviews, empathy maps, key insights.</p>
+          <div class="links">
+            <a class="btn btn-view-slides" href="deliverables/GR1.pdf" target="_blank" rel="noopener">View slides (PDF)</a>
+          </div>
+        </article>
+
+        <article class="deliverable card" data-accent="purple">
+          <div class="deliverable-top">
+            <h4>GR2 — Additional needfinding + POV/HMW + experience prototypes</h4>
+            <span class="badge badge-ready">Ready</span>
+          </div>
+          <p class="muted">Expanded interviews, synthesis, and prototypes.</p>
+          <div class="links">
+            <a class="btn btn-view-slides" href="https://docs.google.com/presentation/d/1CuOZua4J1kDUw7StdjiP9on_pJ08F-g4msG1ZP2Azt0/edit?slide=id.g3c1fa0aa59b_0_0#slide=id.g3c1fa0aa59b_0_0" target="_blank" rel="noopener">View slides</a>
+          </div>
+        </article>
+
+        <article class="deliverable card" data-accent="green">
+          <div class="deliverable-top">
+            <h4>GR4 — Concept video</h4>
+            <span class="badge badge-ready">Ready</span>
+          </div>
+          <p class="muted">Project pivot + concept framing.</p>
+          <div class="links">
+            <a class="btn btn-view-slides" href="https://docs.google.com/presentation/d/1fJOVXM2m0dBIFv1YeGQss-tdcrzqQEIK-i4DpyvTQ9E/edit?slide=id.g3c45f335f2b_0_630#slide=id.g3c45f335f2b_0_630" target="_blank" rel="noopener">View slides</a>
+            <a data-kind="YT" href="https://youtube.com/shorts/eweid24nivI?feature=shared" rel="noreferrer noopener" target="_blank">YouTube</a>
+          </div>
+        </article>
+
+        <article class="deliverable card" data-accent="pink">
+          <div class="deliverable-top">
+            <h4>GR5 — Sketching, low-fi prototype + usability testing</h4>
+            <span class="badge badge-ready">Ready</span>
+          </div>
+          <p class="muted">Concept sketches, paper prototype, testing results.</p>
+          <div class="links">
+            <a class="btn btn-view-slides" href="https://docs.google.com/presentation/d/12KqCe8YB3QBWq6oyZggo7rqPoxQj_GoN4KDsXhCIGOw/edit?slide=id.g3c7268ab346_0_0#slide=id.g3c7268ab346_0_0" target="_blank" rel="noopener">View slides</a>
+          </div>
+        </article>
+
+        <article class="deliverable card" data-accent="cyan">
+          <div class="deliverable-top">
+            <h4>GR6 — Interactive medium-fi prototype</h4>
+            <span class="badge badge-ready">Ready</span>
+          </div>
+          <p class="muted">Medium-fi prototype.</p>
+          <div class="links">
+            <a class="btn btn-view-slides" href="https://docs.google.com/presentation/d/1fBjxh_tRVZeN11Wgs_yHb5_cxTo3aOQSI5TIek7tz_A/edit?slide=id.g3bf2324682f_0_0#slide=id.g3bf2324682f_0_0" target="_blank" rel="noopener">View slides</a>
+            <a data-kind="LINK" href="deliverables/GR6-prototype-link.html">Prototype</a>
+          </div>
+        </article>
+
+        <article class="deliverable card" data-accent="lime">
+          <div class="deliverable-top">
+            <h4>GR7/GR8 — Heuristic evaluation synthesis</h4>
+            <span class="badge badge-ready">Ready</span>
+          </div>
+          <p class="muted">Collated feedback from GR7, synthesized in GR8.</p>
+          <div class="links">
+            <a data-kind="PDF" href="deliverables/GR7-8-heuristic-synthesis.pdf">Synthesis</a>
+            <a data-kind="XLSX" href="deliverables/GR7-8-heuristic-synthesis.xlsx">Spreadsheet</a>
+          </div>
+        </article>
+
+        <article class="deliverable card" data-accent="violet">
+          <div class="deliverable-top">
+            <h4>GR8 — Interactive high-fi prototype</h4>
+            <span class="badge badge-ready">Ready</span>
+          </div>
+          <p class="muted">Hi-fi prototype.</p>
+          <div class="links">
+            <a class="btn btn-view-slides" href="https://docs.google.com/presentation/d/1HtC4F8CxmafxJ3enDP1PBwbTzmkywWEXZF84RDSFc7c/edit?slide=id.g3c5723b7cf3_0_1261#slide=id.g3c5723b7cf3_0_1261" target="_blank" rel="noopener">View slides</a>
+            <a data-kind="FIGMA" href="https://www.figma.com/design/cyCgAJYGy612MWPMXerbW9/ThoughtAI?node-id=0-1&p=f" rel="noreferrer noopener" target="_blank">Figma</a>
+            <a data-kind="DOC" href="https://docs.google.com/document/d/1VAVI8iyTiMWJcufIeCyEmv0zfN8dpG8DJe1Fra4Yny0/edit?usp=sharing" rel="noreferrer noopener" target="_blank">Readme</a>
+          </div>
+        </article>
+
+        <article class="deliverable card" data-accent="amber">
+          <div class="deliverable-top">
+            <h4>GR9 — Poster, pitch &amp; demo video</h4>
+            <span class="badge badge-soon">Soon</span>
+          </div>
+          <p class="muted">Coming soon.</p>
+          <div class="links">
+            <a data-kind="PDF" href="deliverables/GR9-pitch.pdf">Pitch</a>
+            <a data-kind="PDF" href="deliverables/GR9-script.pdf">Script</a>
+            <a data-kind="PDF" href="deliverables/GR9-poster.pdf">Poster</a>
+            <a data-kind="MP4" href="deliverables/GR9-demo-video.mp4">Video</a>
+            <a data-kind="EMBED" href="deliverables/GR9-demo-video.html">Embed</a>
+          </div>
+        </article>
+
+        <article class="deliverable card" data-accent="red">
+          <div class="deliverable-top">
+            <h4>GR10 — Final report</h4>
+            <span class="badge badge-soon">Soon</span>
+          </div>
+          <p class="muted">Coming soon.</p>
+          <div class="links">
+            <a data-kind="PDF" href="deliverables/GR10-final-report.pdf">PDF</a>
+            <a data-kind="DOC" href="deliverables/GR10-final-report.html">Doc</a>
+          </div>
+        </article>
+      </div>
+
+      <details class="embed card">
+        <summary><strong>Concept video (embedded)</strong></summary>
+        <div class="embed-frame">
+          <iframe
+            title="ThoughtAI concept video (YouTube)"
+            src="https://www.youtube-nocookie.com/embed/eweid24nivI"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <p class="muted small">If the embed fails, use the YouTube link above.</p>
+      </details>
+    </section>
+
+    <section id="team" class="container section">
+      <h3>Team</h3>
+      <div class="grid-3">
+        <div class="card">
+          <h4>Daisy Zhong</h4>
+          <p class="muted">4th year Computer Science</p>
+        </div>
+        <div class="card">
+          <h4>Anvitha Kosuri</h4>
+          <p class="muted">4th year Computer Science</p>
+        </div>
+        <div class="card">
+          <h4>Lexuan Huang</h4>
+          <p class="muted">3rd year Computer Science</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="links" class="container section">
+      <h3>Project links</h3>
+      <div class="grid-2">
+        <div class="card">
+          <h4>Prototype</h4>
+          <p class="muted">
+            High-fi prototype and documentation.
+          </p>
+          <div class="links">
+            <a href="https://www.figma.com/design/cyCgAJYGy612MWPMXerbW9/ThoughtAI?node-id=0-1&p=f" rel="noreferrer noopener" target="_blank">Figma file</a>
+            <a href="https://docs.google.com/document/d/1VAVI8iyTiMWJcufIeCyEmv0zfN8dpG8DJe1Fra4Yny0/edit?usp=sharing" rel="noreferrer noopener" target="_blank">README doc</a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> ThoughtAI — Built with a starter template.</p>
+      <p>&copy; <span id="year"></span> ThoughtAI (Team 17) — UCSB CS185.</p>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    (function () {
+      const enter = document.getElementById('enter');
+      const cta = document.getElementById('enter-cta');
+      if (!enter || !cta) return;
+
+      function dismissEnter() {
+        enter.setAttribute('data-dismissed', 'true');
+        enter.classList.add('is-dismissed');
+        window.setTimeout(() => enter.remove(), 450);
+      }
+
+      cta.addEventListener('click', (e) => {
+        const href = cta.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          dismissEnter();
+          const el = document.querySelector(href);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.replaceState(null, '', href);
+        }
+      });
+
+      // If user loads a deep link, skip the enter screen.
+      if (location.hash && location.hash !== '#top') dismissEnter();
+    })();
   </script>
 </body>
 </html>
